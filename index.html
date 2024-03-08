@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Portal</title>
+<link rel="stylesheet" href="css/style.css"/>
+<!--fav-icon-->
+<link rel="shortcut icon" href="https://media.istockphoto.com/id/1333580948/photo/piggy-bank-with-graduation-cap-on-black-glass-floor-money-saving-concept.jpg?b=1&s=612x612&w=0&k=20&c=Du4GSuhfPEDG23FQafWTFcqELTaqoUC28DanbpoCr4E="/>
+<style>
+    /* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    width: 400px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+    
+    <section class="main" style="background-image: url(images/hero-bg.png);">
+        
+        <nav>
+            <a href="#" class="logo">
+                <img src="images/logo.png" width="320px" />
+            </a>
+            
+            <ul class="menu" style="border-radius: 5px;">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="scholarships.html">Scholarships</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+                <li><a class="active" onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 5px; cursor: pointer;">Login</a></li>
+            </ul>
+        </nav>
+       
+        <!-- login modal start -->
+        <div id="id01" class="modal">
+              <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <p style="font-size: 22px;">Student Login</p>
+                  <hr>
+              </div>
+              <div class="container">
+                  <!-- Add Sign in with Google button -->
+                  <button onclick="signInWithGoogle()" style="background-color: #dd4b39; color: white;">Sign in with Google</button>
+              </div>
+              <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw"><a href="#">Register Here</a></span>
+                  <span class="psw" style="margin-right: 11px;"><a href="#">Forgot  password?</a></span>
+              </div>
+      </div>
+        <!-- login modal end  -->
+    
+    
+</div>
+
+        <!--main-content-->
+        <div class="home-content">
+            
+            <!--text-->
+            <div class="home-text" >
+                
+                <h3 style="color: white; letter-spacing: 3px;">Welcome to Scholarship Portal</h3>
+                <h1 style="color: white;">Explore Opportunities</h1>
+                <p style="color: white;">Discover various scholarships to support your education journey.</p>
+            <!--login-btn-->
+            <a href="scholarships.html" class="main-login" style="border-radius: 5px;">Apply Here</a>
+            </div>
+            
+        </div>
+        
+    </section>
+    
+    <!--services----------------------->
+    <section class="services">
+        <!--heading----------->
+        <div class="services-heading">
+            <h2>Featured Scholarships</h2>
+            <p>Explore some of the highlighted scholarships available for you.</p>
+        </div>
+        <!--box-container----------------->
+        <div class="box-container">
+            <!--box-1-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Merit-Based Scholarship</font>
+                <p>Recognizing academic excellence, this scholarship supports high-achieving students.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-2-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Need-Based Scholarship</font>
+                <p>Providing financial assistance to students with demonstrated financial need.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-3-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>Minority Scholarship</font>
+                <p>Supporting minority students to pursue higher education and career aspirations.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-4-------->
+            <div class="box">
+                <img src="images/icon5.png">
+                <font>STEM Scholarship</font>
+                <p>Encouraging students in Science, Technology, Engineering, and Mathematics (STEM) fields.</p>
+                <!--btn--------->
+                <a href="#">Apply Now</a>
+            </div>
+            <!--box-1-------->
+            
+        </div>
+    </section>
+    
+    <!--footer------------->
+    <footer>
+        <p>&copy; 2024 Scholarship Portal. All rights reserved. Developed By <a href="https://www.linkedin.com/in/jatishchaudhary/">Team45</a></p>
+    </footer>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    function signInWithGoogle() {
+        var googleUser = null;
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signIn().then(function (success) {
+            console.log('Logged in as: ' + success.getBasicProfile().getName());
+            console.log('ID: ' + success.getBasicProfile().getId());
+            console.log('Email: ' + success.getBasicProfile().getEmail());
+            console.log('Image URL: ' + success.getBasicProfile().getImageUrl());
+        }, function (error) {
+            console.log(error);
+        });
+    }
+       </script>
+ <script src="https://apis.google.com/js/platform.js" async defer></script>
+      
+</body>
+</html>
